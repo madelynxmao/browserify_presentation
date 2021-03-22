@@ -55,15 +55,12 @@ Make index.html
 </html>
 ```
 
-Open in browser, to do this from terminal, you can use open `./index.html` and get the link. There should be an error : require is not defined
+You can open index.html in browser, to do this from terminal, you can use open `./index.html`. There should be an error : require is not defined. To resolve this error, 
 
-Install browserify `$sudo npm install -g browserify`
-
-Open a new terminal
-
-Run `$browserify script2.js -o bundle.js`. This creates a bundle.js file
-
-Go to index.html
+- Install browserify with `$sudo npm install -g browserify`
+- Open a new terminal
+- Run `$browserify script2.js -o bundle.js`. This creates a bundle.js file
+- Go to index.html
 ```
 <!doctype html>
  
@@ -77,8 +74,7 @@ Go to index.html
 </body>
 </html>
 ```
-
-Reload the page, should work now. Browserify resolves all the require clauses and puts it in bundle.js.
+- Reload the page, your program should work now. Browserify resolves all the require clauses and puts it in bundle.js.
 
 # What other applications are similar to Browserify?
 - webpack - does pretty much the same thing as Browserify, which is processing code to be used in a target environment by translating such code to a form that environment (usually a browser) is able to execute

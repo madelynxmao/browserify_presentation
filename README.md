@@ -25,23 +25,23 @@ https://benclinkinbeard.com/posts/how-browserify-works/
 - Execute with `$ browserify source.js -o target.js`
 
 Make script1.js file
-`
+```
 var msg= "Hello";
 module.exports=msg;
-`
+```
 
 Make script2.js file
-`
+```
 var msgFromScript1=require("./script1");
 var fullMsg=msgFromScript1+ ' ' + "World";
 console.log(fullMsg)
-`
+```
 
 Execute to show it works `$node script2.js`
 
 Make index.html
 
-`
+```
 <!doctype html>
  
 <html lang="en">
@@ -53,7 +53,7 @@ Make index.html
 <body>
 </body>
 </html>
-`
+```
 
 Open in browser, to do this from terminal, you can use open `./index.html` and get the link. There should be an error : require is not defined
 
@@ -64,7 +64,7 @@ Open a new terminal
 Run `$browserify script2.js -o bundle.js`. This creates a bundle.js file
 
 Go to index.html
-`
+```
 <!doctype html>
  
 <html lang="en">
@@ -76,7 +76,7 @@ Go to index.html
 <body>
 </body>
 </html>
-`
+```
 
 Reload the page, should work now. Browserify resolves all the require clauses and puts it in bundle.js.
 

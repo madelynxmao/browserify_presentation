@@ -20,24 +20,24 @@ Browserify is an open source software, with 187 contributors on github, made und
 https://benclinkinbeard.com/posts/how-browserify-works/
 
 ## Demonstration
-Install node with $ npm install -g npm
-Install Browserify with $ npm install --global browserify
-Execute with $ browserify source.js -o target.js
+Install node with `$ npm install -g npm`
+Install Browserify with `$ npm install --global browserify`
+Execute with `$ browserify source.js -o target.js`
 
 Make script1.js file
-var msg= "Hello";
-module.exports=msg;
+`var msg= "Hello";
+module.exports=msg;`
 
 Make script2.js file
-var msgFromScript1=require("./script1");
+`var msgFromScript1=require("./script1");
 var fullMsg=msgFromScript1+ ' ' + "World";
-console.log(fullMsg)
+console.log(fullMsg)`
 
-Execute to show it works $node script2.js
+Execute to show it works `$node script2.js`
 
 Make index.html
 
-<!doctype html>
+`<!doctype html>
  
 <html lang="en">
 <head>
@@ -47,19 +47,19 @@ Make index.html
 </head>
 <body>
 </body>
-</html>
+</html>`
 
-Open in browser, to do this from terminal, you can use open ./index.html and get the link. There should be an error : require is not defined
+Open in browser, to do this from terminal, you can use open `./index.html` and get the link. There should be an error : require is not defined
 
-Install browserify $sudo npm install -g browserify
+Install browserify `$sudo npm install -g browserify`
 
 Open a new terminal
 
-Run $browserify script2.js -o bundle.js
-	Creates a bundle.js file
+Run `$browserify script2.js -o bundle.js`
+	This creates a bundle.js file
 
 Go to index.html
-<!doctype html>
+`<!doctype html>
  
 <html lang="en">
 <head>
@@ -69,7 +69,7 @@ Go to index.html
 </head>
 <body>
 </body>
-</html>
+</html>`
 
 Reload the page, should work now. Browserify resolves all the require clauses and puts it in bundle.js.
 
